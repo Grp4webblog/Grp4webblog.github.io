@@ -119,8 +119,18 @@ header {
 
 .details {
   display: flex;
+  width: auto;
   font-family: 'Roboto';
   color: rgb(18, 33, 64);
+  justify-content: flex-start;
+}
+
+.date {
+  margin-left: 1vmin;
+}
+
+.author, .date {
+  display: flex;
   align-items: center;
 }
 
@@ -128,7 +138,7 @@ header {
   height: 1em;
 }
 
-.details:hover {
+.author:hover, .date:hover {
   opacity: .7;
 }
 
