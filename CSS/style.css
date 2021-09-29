@@ -256,28 +256,11 @@ header {
 .footer {
   position: relative;
   background: rgb(18, 33, 64);
-  height: 200px;
+  height: 15vh;
   line-height: 75px;
   display: flex;
-  align-items: baseline;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-.footer > .navbar {
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-  height: 50%;
-}
-
-.footer > .logo {
-  height: 45%;
+  justify-content: center;
 }
 
 .footer-names {
