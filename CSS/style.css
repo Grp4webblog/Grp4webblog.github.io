@@ -236,7 +236,7 @@ header {
 }
 
 .toslide {
-  margin: 2vw 2vw 2vw 2vw;
+  margin: 0 2vw 2vw 2vw;
   padding: 0.5em;
   height: 5vh;
   background: none;
