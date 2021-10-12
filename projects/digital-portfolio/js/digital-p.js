@@ -1,3 +1,4 @@
+// for clicking arrow
 let arrow = document.querySelectorAll('.arrow');
 for (var i = 0; i < arrow.length; i++) {
   arrow[i].addEventListener("click", (e)=>{
@@ -6,9 +7,10 @@ for (var i = 0; i < arrow.length; i++) {
   });
 }
 
+// for toggling sidebar
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".bx-menu");
-console.log(sidebarBtn);
+
 sidebarBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("close");
 });

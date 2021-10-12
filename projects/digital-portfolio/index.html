@@ -2,13 +2,158 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <title>Digital Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class='bx bx-collection'></i>
+        <span class="logo_name">Digi-P</span>
+      </div>
+      <div class="nav-links">
+        <li>
+          <div class="home-link">
+            <a href="#home">
+              <i class='bx bx-home-alt'></i>
+              <span class="link_name">Home</span>
+            </a>
+          </div>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#topic1">
+              <i class='bx bx-dna'></i>
+              <span class="link_name">Biological Self</span>
+            </a>
+            <i class='bx bx-down-arrow-alt arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#topic1">Biological Self</a></li>
+            <li><a href="#">Stargate</a></li>
+            <li><a href="#">Black Ops</a></li>
+            <li><a href="#">Teyvat</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#topic2">
+              <i class='bx bx-group'></i>
+              <span class="link_name">Social Self</span>
+            </a>
+            <i class='bx bx-down-arrow-alt arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#topic2">Social Self</a></li>
+            <li><a href="#">Stargate</a></li>
+            <li><a href="#">Black Ops</a></li>
+            <li><a href="#">Teyvat</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#topic3">
+              <i class='bx bx-brain' ></i>
+              <span class="link_name">Mental Self</span>
+            </a>
+            <i class='bx bx-down-arrow-alt arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#topic3">Mental Self</a></li>
+            <li><a href="#">Stargate</a></li>
+            <li><a href="#">Black Ops</a></li>
+            <li><a href="#">Teyvat</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#topic4">
+              <i class='bx bx-heart' ></i>
+              <span class="link_name">Emotional Self</span>
+            </a>
+            <i class='bx bx-down-arrow-alt arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#topic4">Emotional Self</a></li>
+            <li><a href="#">Stargate</a></li>
+            <li><a href="#">Black Ops</a></li>
+            <li><a href="#">Teyvat</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="icon-link">
+            <a href="#topic5">
+              <i class='bx bx-star'></i>
+              <span class="link_name">Spiritual Self</span>
+            </a>
+            <i class='bx bx-down-arrow-alt arrow'></i>
+          </div>
+          <ul class="sub-menu">
+            <li><a class="link_name" href="#topic5">Spiritual Self</a></li>
+            <li><a href="#">Stargate</a></li>
+            <li><a href="#">Black Ops</a></li>
+            <li><a href="#">Teyvat</a></li>
+          </ul>
+        </li>
+      </div>
+      <div class="profile-details">
+        <div class="profile-content">
+          <img src="images/kazuha-profile.jpg" alt="leaf">
+        </div>
+        <div class="name-job">
+          <div class="profile_name">Raphael Llave</div>
+          <div class="job">Mapua Student</div>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-menu">
+      <!-- <i class='bx bx-menu' ></i> -->
+      <img class='bx-menu' src="images/menu-icon.png" alt="menu-icon">
+    </div>
+    <section class="web-content">
+      <hero>
+        <div class="hero" id="home">
+          <h1 id="digital-p">Digital Portfolio</h1>
+          <span id="subtitle">Understanding the self</span>
+        </div>
+      </hero>
+      <div class="main-content">
+        <div class="topic-dark" id="topic1">
+          <div class="topic-container">
+            <h1>Section 1</h1>
+          </div>
+        </div>
+        <div class="topic-light" id="topic2">
+          <div class="topic-container">
+            <h1>Section 2</h1>
+          </div>
+        </div>
+        <div class="topic-dark" id="topic3">
+          <div class="topic-container">
+            <h1>Section 3</h1>
+          </div>
+        </div>
+        <div class="topic-light" id="topic4">
+          <div class="topic-container">
+            <h1>Section 4</h1>
+          </div>
+        </div>
+        <div class="topic-dark" id="topic5">
+          <div class="topic-container">
+            <h1>Section 5</h1>
+          </div>
+        </div>
+      </div>
+      <!-- <footer>
 
-    <script type="text/javascript" src="digital-p.js"></script>
+      </footer> -->
+
+    </section>
+    <script type="text/javascript" src="js/digital-p.js"></script>
   </body>
 </html>

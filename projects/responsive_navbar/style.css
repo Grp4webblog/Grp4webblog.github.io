@@ -28,7 +28,6 @@ body {
 
 .sidebar.close {
   width: 75px;
-  z-index: 100;
 }
 
 .sidebar .logo-details {
@@ -326,7 +325,6 @@ body {
 .sidebar.close ~ .home-section {
   left: 75px;
   width: calc(100% - 75px);
-  opacity: 1;
 }
 
 .home-section .home-content {
@@ -337,7 +335,6 @@ body {
 
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
-  color: #fff;
   font-size: 2.5em;
   color: #00132e;
 }
