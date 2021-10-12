@@ -14,3 +14,12 @@ let sidebarBtn = document.querySelector(".bx-menu");
 sidebarBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("close");
 });
+
+let view = document.querySelectorAll(".info-link");
+for (var i = 0; i < view.length; i++) {
+  view[i].addEventListener("click", (e)=>{
+    let light = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.nextElementSibling;
+    light.classList.toggle("expand");
+    // insert 'view more' button opacity and pointer events
+  });
+}
