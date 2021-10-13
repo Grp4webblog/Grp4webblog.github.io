@@ -23,3 +23,14 @@ for (var i = 0; i < view.length; i++) {
     // insert 'view more' button opacity and pointer events
   });
 }
+
+let trivia = document.querySelectorAll(".trivia-title");
+for (var i = 0; i < trivia.length; i++) {
+  trivia[i].addEventListener("click", (e)=>{
+    e.target.style.opacity = 0;
+    e.target.style.pointerEvents = "none";
+    e.target.nextElementSibling.style.opacity = 1;
+    e.target.nextElementSibling.childNodes[3].style.opacity = 0.7;
+    // console.log(e.target.nextElementSibling.childNodes[3]);
+  });
+}

@@ -25,28 +25,21 @@ html {
   overflow: scroll;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
-
-/* ::-webkit-scrollbar-thumb {
-  color: #e8eaff;
-  border: 5px solid #00021c;
-} */
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #00021c;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #e8eaff;
   border-radius: 10px;
 }
-
 
 .sidebar {
   position: fixed;
@@ -55,7 +48,6 @@ html {
   height: 100%;
   width: 300px;
   background: #090b26;
-  /* background: #1b1e40; */
   z-index: 100;
   transition: 300ms ease;
 }
@@ -299,7 +291,6 @@ html {
 .toggle-menu .bx-menu {
   font-size: 2.5em;
   color: #00021c;
-  /* #e8eaff */
   width: 75px;
   text-align: center;
   cursor: pointer;
@@ -354,7 +345,6 @@ html {
   opacity: 0.7;
 }
 
-/* add .expand class */
 .topic-dark, .topic-light.expand {
   width: 100%;
   display: flex;
@@ -366,10 +356,6 @@ html {
   background: #00021c;
 }
 
-.topic-dark .topic-container {
-  /* background: #090b26; */
-}
-
 .topic-light {
   height: 0;
   background: #e8eaff;
@@ -378,10 +364,6 @@ html {
 
 .topic-light.expand {
   height: 100vh;
-}
-
-.topic-light .topic-container {
-  /* background: #d4d7ff; */
 }
 
 .topic-container {
@@ -414,7 +396,6 @@ html {
 }
 
 .content-grid {
-  /* position: relative; */
   height: 100%;
   width: 100%;
   display: grid;
@@ -436,13 +417,16 @@ html {
   padding: 30px;
   border-radius: 20px;
   height: 70%;
-  /* background: #090b26; */
   background: #1b1e40;
-  overflow: scroll;
 }
 
 .left_side .item1::-webkit-scrollbar {
   display: none;
+}
+
+.left_side .item1 .main-p {
+  height: 100%;
+  overflow: hidden;
 }
 
 .left_side .item1 p {
@@ -457,7 +441,6 @@ html {
   width: 100%;
   overflow: hidden;
   display: flex;
-  /* background: #090b26; */
   background: #1b1e40;
   border-radius: 20px;
 }
@@ -469,10 +452,9 @@ html {
 }
 
 .left_side .item2 .reflect-text {
-  padding: 15px;
+  padding: 15px 30px;
   height: 100%;
   width: 50%;
-  overflow: scroll;
 }
 
 .left_side .item2 .reflect-text::-webkit-scrollbar {
@@ -486,10 +468,12 @@ html {
 }
 
 .left_side .item2 .reflect-text p {
+  height: 60%;
   text-align: justify;
   color: #fff;
   opacity: 0.8;
   font-family: "Open sans", sans-serif;
+  overflow: hidden;
 }
 
 .right_side {
@@ -503,7 +487,6 @@ html {
   width: 100%;
   height: 50%;
   border-radius: 20px;
-  /* background: #090b26; */
   background: #1b1e40;
   display: flex;
   overflow: hidden;
@@ -532,7 +515,7 @@ html {
   text-align: justify;
   color: #fff;
   opacity: 0.8;
-  overflow: scroll;
+  overflow: hidden;
   font-family: "Open sans", sans-serif;
 }
 
@@ -576,3 +559,60 @@ html {
   width: 100%;
   border-radius: 20px;
 }
+
+.right_side .item4 {
+  display: flex;
+  align-items: center;
+}
+
+.right_side .item4 .trivia-title {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 200ms ease;
+  z-index: 100;
+}
+
+.right_side .item4 .trivia-title:hover {
+  opacity: 1;
+}
+
+.right_side .item4 .hidden-content {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.right_side .item4 .hidden-content h2{
+  color: #fff;
+  padding-bottom: 15px;
+}
+
+.right_side .item4 .hidden-content p {
+  color: #fff;
+  font-family: "Open sans", sans-serif;
+  text-align: justify;
+}
+
+/*
+@media screen and (max-width: 768px) {
+  .topic_title {
+    position: unset;
+    display: block;
+    width: 100%;
+  }
+
+
+  .content-grid {
+
+  }
+}
+
+@media screen and (max-width: 375px ) {
+
+} */
