@@ -466,6 +466,7 @@ html {
   display: block;
   color: #fff;
   font-family: Acre, sans-serif;
+  overflow: hidden;
 }
 
 .left_side .item2 .reflect-text p {
@@ -507,16 +508,18 @@ html {
 .right_side .activity-content h2 {
   display: block;
   color: #fff;
+  white-space: nowrap;
   font-family: Acre, sans-serif;
+  overflow: hidden;
 }
 
 .right_side .activity-content p {
   padding-top: 15px;
-  height: 80;
+  height: 80%;
   text-align: justify;
   color: #fff;
   opacity: 0.8;
-  overflow: hidden;
+  overflow: scroll;
   font-family: "Open sans", sans-serif;
 }
 
@@ -593,15 +596,23 @@ html {
 .right_side .item4 .hidden-content h2{
   color: #fff;
   padding-bottom: 15px;
+  white-space: nowrap;
   transition: all 200ms ease;
+  overflow: hidden;
 }
 
 .right_side .item4 .hidden-content p {
   color: #fff;
+  height: 85%;
   font-family: "Open sans", sans-serif;
   text-align: justify;
   pointer-events: none;
   transition: all 200ms ease;
+  overflow: scroll;
+}
+
+.right_side .item4 .hidden-content p::-webkit-scrollbar {
+  display: none;
 }
 
 .right_side .item4 .hidden-content.shown p {
@@ -614,16 +625,17 @@ html {
 }
 
 .hidden-content.shown {
-  background-size: cover;
   box-shadow: inset 0 0 0 1000px rgba(0, 2, 28, 0.7);
 }
 
-#topic3 .hidden-content.shown {
-  background: rgba(0, 2, 28, 0.5) url("../images/reflection/falcon-heavy.jpg");
+#topic3 .right_side .item4 .hidden-content.shown {
+  background: url("../images/reflection/falcon-heavy.jpg");
+  background-size: cover;
 }
 
 #topic5 .hidden-content.shown {
-  background: rgba(0, 2, 28, 0.5) url("../images/jp-img.jpg");
+  background: url("../images/jp-img.jpg");
+  background-size: cover;
 }
 
 /*
