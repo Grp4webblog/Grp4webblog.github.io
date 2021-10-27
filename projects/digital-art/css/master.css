@@ -1,0 +1,546 @@
+/* fonts */
+@font-face {
+  font-family: Acre;
+  src: url("../fonts/acre-medium.otf");
+}
+
+@font-face {
+  font-family: CenturyGothic;
+  src: url("../fonts/GOTHIC.TTF");
+}
+
+@font-face {
+  font-family: Bebas;
+  sr: url("../fonts/BebasNeue-Regular.otf");
+}
+
+/* animations */
+
+
+
+/* global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: Acre, sans-serif;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141524;
+  border-radius: 10px;
+}
+
+/* properties - initial */
+
+/* navbar */
+.navbar {
+  display: flex;
+  position: fixed;
+  height: 70px;
+  /* background-color: #141524; */
+  background-color: transparent;
+  /* Insert navbar color transition if you have taym :) */
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  line-height: 70px;
+  padding: 0 50px 0 30px;
+  z-index: 1;
+}
+
+.logo_name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #141524;
+}
+
+.logo .social {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo .social i {
+  color: #141524;
+  font-size: 2rem;
+}
+
+.navbar ul {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.5rem;
+  z-index: 5;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #141524;
+  font-family: CenturyGothic, sans-serif;
+}
+
+
+/* home */
+.home {
+  height: 100vh;
+  background-color: #F2F2F2;
+}
+
+.text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text .title {
+  font-family: Bebas, sans-serif;
+  font-weight: 700;
+  font-size: 6rem;
+  color: #141524;
+}
+
+.text .subtitle {
+  font-family: CenturyGothic, sans-serif;
+  font-size: 2rem;
+}
+
+/* Action table */
+.actionTable {
+  height: 100vh;
+  background-color: #FFF;
+  display: grid;
+  padding: 80px 125px 50px 125px;
+  grid-template: 40% 60% / auto;
+}
+
+.objective {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.obj-title {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+  height: 80%;
+  border-radius: 35px;
+  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.2) inset,
+  0 0 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+
+.obj-title.expand {
+  width: 35%;
+  height: 85%;
+}
+
+#obj1 {
+  background: #FF4C60;
+}
+
+#obj2 {
+  background: #3A6FCE;
+}
+
+#obj3 {
+  background: #6FB53F;
+}
+
+.obj-title:hover, .obj-title.expand {
+  box-shadow: 0 0 15px 30px rgba(0, 0, 0, 0) inset,
+  0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.obj-title span {
+  width: 100%;
+  padding-top: 95px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: Acre, CenturyGothic;
+  transition: 200ms ease;
+}
+
+.obj-title.expand span {
+  font-size: 2.2rem;
+  padding-top: 110px;
+}
+
+#obj2 span {
+  font-size: 1.6rem;
+}
+
+.obj-title.expand#obj2 span {
+  font-size: 2rem;
+  padding-top: 100px;
+}
+
+
+.obj-title img {
+  position: absolute;
+  object-fit: cover;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  background: #fff;
+  transition: all 200ms ease;
+}
+
+.obj-title:hover > img, .obj-title:hover > i, .obj-title.expand img, .obj-title.expand i {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.obj-title i {
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  font-size: 3rem;
+  line-height: 75px;
+  text-align: center;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  background: #fff;
+  transition: all 200ms ease;
+}
+
+.obj-title.expand i, .obj-title.expand img {
+  transform: translate(0, -40px);
+  height: 125px;
+  width: 125px;
+}
+
+.obj-title.expand i {
+  font-size: 4rem;
+  line-height: 105px;
+
+}
+
+.obj-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.table-cell {
+  height: 45%;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 25px;
+  transition: all 400ms ease;
+}
+
+.table-cell h2{
+  font-size: 1.5rem;
+  padding-bottom: 15px;
+  transition: all 200ms ease;
+}
+
+
+#obj-table {
+  width: 32%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#obj-table .goal-description {
+  position: absolute;
+  width: calc(100% - 50px);
+  font-family: CenturyGothic, sans-serif;
+  opacity: 0;
+  text-align: justify;
+  transition: all 200ms ease;
+}
+
+#act-table {
+  width: 49%;
+}
+
+#act-table .actlist {
+  position: absolute;
+  width: calc(100% - 50px);
+  font-family: CenturyGothic, sans-serif;
+  /* opacity: 0; */
+  text-align: justify;
+  transition: all 200ms ease;
+}
+
+#deadline-table {
+  width: 49%;
+}
+
+#act-table h2, #deadline-table h2 {
+  text-align: center;
+  line-height: calc(100vh * 0.45 * 0.6 - 130px + 25px);
+}
+
+
+#people-table {
+  width: 32%;
+  position: relative;
+  top: 0;
+}
+
+#people-table .personlist {
+  position: absolute;
+  width: calc(100% - 50px);
+  font-family: CenturyGothic, sans-serif;
+  opacity: 0;
+  text-align: justify;
+  transition: all 200ms ease;
+}
+
+#resources-table {
+  width: 32%;
+  position: relative;
+}
+
+#resources-table .resources {
+  position: absolute;
+  width: calc(100% - 50px);
+  font-family: CenturyGothic, sans-serif;
+  opacity: 0;
+  text-align: justify;
+  transition: all 200ms ease;
+}
+
+
+
+/* Q&A */
+.q-a {
+  height: 100vh;
+  padding: 100px 125px;
+  display: grid;
+  grid-template: 100% / 45% 55%;
+  background-color: #F2F2F2;
+}
+
+/* questions */
+.questions {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.question {
+  height: 16%;
+  width: 75%;
+  display: flex;
+  border-radius: 30px;
+  padding: 20px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+
+.question.open {
+  height: 20%;
+  transform: translate(100px, 0);
+}
+
+#q1:hover {
+  background: #FF4C60;
+  color: #fff;
+}
+
+.question.open#q1 {
+  background: #FF4C60;
+  color: #fff;
+}
+
+#q2:hover {
+  background: #9048E0;
+  color: #fff;
+}
+
+.question.open#q2 {
+  background: #9048E0;
+  color: #fff;
+}
+
+#q3:hover {
+  background: #FAAA1E;
+  color: #fff;
+}
+
+.question.open#q3 {
+  background: #FAAA1E;
+  color: #fff;
+}
+
+#q4:hover {
+  background: #6FB53F;
+  color: #fff;
+}
+
+.question.open#q4 {
+  background: #6FB53F;
+  color: #fff;
+}
+
+#q5:hover {
+  background: #3A6FCE;
+  color: #fff;
+}
+
+.question.open#q5 {
+  background: #3A6FCE;
+  color: #fff;
+}
+
+.question p {
+  max-height: 100%;
+  width: 80%;
+  text-align: justify;
+  font-family: CenturyGothic, sans-serif;
+  overflow: hidden;
+  transition: all 250ms ease;
+}
+
+.question.open p {
+  width: 90%;
+  font-size: 1.3rem;
+}
+
+#q3 p {
+  font-size: 0.8em;
+}
+
+.question.open#q3 p {
+  font-size: 1rem;
+}
+
+.question i {
+  align-self: center;
+  text-align: center;
+  width: 20%;
+  font-size: 2rem;
+  transition: all 250ms ease;
+}
+
+.question.open i {
+  width: 10%;
+}
+/* answers */
+.answers {
+  max-height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.answer-box {
+  width: 100%;
+  height: 70%;
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  transition: all 200ms ease;
+}
+
+.answer-box::-webkit-scrollbar, .visuals::-webkit-scrollbar {
+  display: none;
+}
+
+.answers .answer {
+  min-height: 100%;
+  width: 100%;
+  border-radius: 30px;
+  padding: 30px 50px;
+  position: absolute;
+  text-align: justify;
+  font-family: CenturyGothic, sans-serif;
+  color: #FFF;
+  opacity: 0;
+  font-size: 1.4rem;
+  transition: all 200ms ease;
+}
+
+
+#a1 {
+  background: #FF4C60;
+}
+
+#a2 {
+  background: #9048E0;
+}
+
+#a3 {
+  background: #FAAA1E;
+}
+
+#a4 {
+  background: #6FB53F;
+}
+
+#a5 {
+  background: #3A6FCE;
+}
+
+.answers .visuals {
+  height: 25%;
+  width: 100%;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  overflow: scroll;
+}
+
+/* About */
+.about {
+  height: 100vh;
+  background-color: #FFF;
+}
