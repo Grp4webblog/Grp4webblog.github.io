@@ -153,6 +153,15 @@ for (var i = 0; i < option.length; i++) {
       var res = document.getElementById('r1');
       res.style.opacity = 0.8;
       openRes = res;
+
+      var act = document.getElementById('ac1');
+      act.style.opacity = 0.8;
+      openAct = act;
+
+      var time = document.getElementById('t1');
+      time.style.opacity = 0.8;
+      openDate = time;
+
     } else if (storedOpenTable.id == document.getElementById('obj2').id) {
       for (var i = 0; i < boxes.length; i++) {
         boxes[i].style.border = "2px solid #3A6FCE";
@@ -172,6 +181,15 @@ for (var i = 0; i < option.length; i++) {
       var res = document.getElementById('r2');
       res.style.opacity = 0.8;
       openRes = res;
+
+      var act = document.getElementById('ac2');
+      act.style.opacity = 0.8;
+      openAct = act;
+
+      var time = document.getElementById('t2');
+      time.style.opacity = 0.8;
+      openDate = time;
+
     } else if (storedOpenTable.id == document.getElementById('obj3').id) {
       for (var i = 0; i < boxes.length; i++) {
         boxes[i].style.border = "2px solid #6FB53F";
@@ -191,6 +209,41 @@ for (var i = 0; i < option.length; i++) {
       var res = document.getElementById('r3');
       res.style.opacity = 0.8;
       openRes = res;
+
+      var act = document.getElementById('ac3');
+      act.style.opacity = 0.8;
+      openAct = act;
+
+      var time = document.getElementById('t3');
+      time.style.opacity = 0.8;
+      openDate = time;
     }
   });
 }
+
+// slide function
+//
+// var slideIndex = 1;
+// showSlides(slideIndex);
+//
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+//
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+//
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName('slide');
+//
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//
+//   slides[slideIndex-1].style.display = "block";
+// }

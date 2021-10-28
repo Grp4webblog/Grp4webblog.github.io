@@ -14,10 +14,6 @@
   sr: url("../fonts/BebasNeue-Regular.otf");
 }
 
-/* animations */
-
-
-
 /* global */
 * {
   margin: 0;
@@ -58,8 +54,8 @@ html {
   display: flex;
   position: fixed;
   height: 70px;
-  /* background-color: #141524; */
-  background-color: transparent;
+  background-color: #141524;
+  /* background-color: transparent; */
   /* Insert navbar color transition if you have taym :) */
   justify-content: center;
   width: 100%;
@@ -80,7 +76,7 @@ html {
 .logo_name {
   font-size: 2rem;
   font-weight: 700;
-  color: #141524;
+  color: #fff;
 }
 
 .logo .social {
@@ -92,8 +88,17 @@ html {
 }
 
 .logo .social i {
-  color: #141524;
+  color: #fff;
+  background-color: #141524;
+  padding: 1px;
+  border-radius: 50%;
   font-size: 2rem;
+  transition: all 200ms ease;
+}
+
+.logo .social i:hover {
+  color: #141524;
+  background-color: #fff;
 }
 
 .navbar ul {
@@ -110,7 +115,7 @@ html {
 
 .navbar ul li a{
   text-decoration: none;
-  color: #141524;
+  color: #fff;
   font-family: CenturyGothic, sans-serif;
 }
 
@@ -146,7 +151,7 @@ html {
   height: 100vh;
   background-color: #FFF;
   display: grid;
-  padding: 80px 125px 50px 125px;
+  padding: 80px 80px 30px 80px;
   grid-template: 40% 60% / auto;
 }
 
@@ -257,36 +262,43 @@ html {
 .obj-title.expand i {
   font-size: 4rem;
   line-height: 105px;
-
 }
 
 .obj-details {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 30px;
 }
 
 .table-cell {
   height: 45%;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 25px;
+  padding: 20px;
+  font-size: 1.1rem;
   transition: all 400ms ease;
+  overflow: scroll;
+}
+
+.table-cell::-webkit-scrollbar {
+  display: none;
 }
 
 .table-cell h2{
+  height: 25%;
   font-size: 1.5rem;
   padding-bottom: 15px;
   transition: all 200ms ease;
+}
+
+.table-cell p {
+  height: 75%;
 }
 
 
 #obj-table {
   width: 32%;
   position: relative;
-  top: 0;
-  left: 0;
 }
 
 #obj-table .goal-description {
@@ -299,32 +311,26 @@ html {
 }
 
 #act-table {
+  position: relative;
   width: 49%;
 }
 
-#act-table .actlist {
+.actlist, .datelist {
   position: absolute;
-  width: calc(100% - 50px);
   font-family: CenturyGothic, sans-serif;
-  /* opacity: 0; */
-  text-align: justify;
+  left: 50px;
   transition: all 200ms ease;
+  opacity: 0;
 }
 
 #deadline-table {
+  position: relative;
   width: 49%;
 }
-
-#act-table h2, #deadline-table h2 {
-  text-align: center;
-  line-height: calc(100vh * 0.45 * 0.6 - 130px + 25px);
-}
-
 
 #people-table {
   width: 32%;
   position: relative;
-  top: 0;
 }
 
 #people-table .personlist {
@@ -355,7 +361,7 @@ html {
 /* Q&A */
 .q-a {
   height: 100vh;
-  padding: 100px 125px;
+  padding: 100px 80px;
   display: grid;
   grid-template: 100% / 45% 55%;
   background-color: #F2F2F2;
