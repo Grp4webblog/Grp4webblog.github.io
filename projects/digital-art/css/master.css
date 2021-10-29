@@ -277,12 +277,12 @@ html {
   padding: 20px;
   font-size: 1.1rem;
   transition: all 400ms ease;
-  overflow: scroll;
+  overflow: auto;
 }
-
+/* 
 .table-cell::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .table-cell h2{
   height: 25%;
